@@ -102,6 +102,24 @@ a {
   background: linear-gradient(aliceblue, rgb(178, 216, 223)); 
 }
 
+.about-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 2em;
+  place-items: center;
+}
+
+.about-text {
+  max-width: 600px;
+  margin: 1em auto;
+  padding: 0px 20px;
+  text-align: justify;
+}
+
+span {
+  font-style: italic;
+}
+
 #images {
   background: linear-gradient(45deg, lightgrey, ivory);
   padding: 1em;
@@ -131,6 +149,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .picture {
@@ -293,5 +312,14 @@ form {
 @media (min-width: 900px) {
   .nav-item {
     font-size: 1.5em;
+  }
+
+  .about-grid {
+    grid-template-columns: minmax(200px, auto) auto minmax(200px, auto);
+    grid-template-rows: 100%;
+  }
+
+  #about-grid-item {
+    height: minmax(300px, 100%);
   }
 }
